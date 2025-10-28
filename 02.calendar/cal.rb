@@ -22,7 +22,7 @@ puts "日 月 火 水 木 金 土"
 
 i = Date.new(year, month, 1).cwday
 i = 0 if i == 7                                # NOTE:日曜日の場合は横軸の位置をリセットする
-print "#{"   " * i}"                           # NOTE: 右寄せのためのマージンをprint
+print "   " * i                                # NOTE: 右寄せのためのマージンをprint
 (1..Date.new(year, month, -1).day).each do |d|
   print d.to_s.rjust(2)
   i +=1
