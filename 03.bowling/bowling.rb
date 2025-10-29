@@ -23,13 +23,10 @@ end
 
 results  = ARGV[0].split(',')
 score    = 0
-frame    = 1
 position = 0
-loop do
+10.times do
   point, position = calculate_point(results, position)
   score += point
-  frame += 1
-  break if frame >= 11
 end
 
 puts score
