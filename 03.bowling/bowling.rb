@@ -16,14 +16,14 @@ end
 
 # NOTE: 1フレーム毎のポイントを計算し、結果と次回以降の読み込み開始の位置を返却する。
 def calculate_point(results, position)
-  first  = results[position]
-  second = results[position + 1]
-  third  = results[position + 2]
+  first_point  = results[position]
+  second_point = results[position + 1]
+  third_point  = results[position + 2]
 
-  return [(first + second + third), (position + 1)] if first == 10
+  return [(first_point + second_point + third_point), (position + 1)] if first_point == 10
 
-  point = first + second
-  point += third if point == 10
+  point = first_point + second_point
+  point += third_point if point == 10
   [point, (position + 2)]
 end
 
